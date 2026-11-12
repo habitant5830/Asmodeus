@@ -1,15 +1,19 @@
 :root {
   font-family: sans-serif;
-  line-height: 2rem;
+  line-height: 1.6;
 
   /* variables */
-  --font-color: #ffffff;
-  --bg-color: #000000;
+  --font-color: #e0e0e0;
+  --page-bg: radial-gradient(#3c0b00, #0a0a0a);
 
   /* links */
-  --link: #ff0000;
-  --link-hover: #7f00ff;
-  --active: #ffd700;
+  --link: #b8c2c1;
+  --link-hover: #4b0082;
+  --active: #f9c1b5;
+  --gap: 24px;
+  --border: 1px solid #bf3c3c;
+  --border-radius: 10px;
+  --padding: 1rem;
 }
 
 a {
@@ -34,21 +38,27 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: serif;
-  gap: 3rem;
-  background-color: var(--bg-color);
+  font-family: sans-serif;
+  gap: var(--gap);
+  background: var(--page-bg); /* authentic */
   color: var(--font-color);
   width: 100%;
 }
 
 header {
   display: flex;
-  margin: 1rem;
+  margin: 1rem 1rem 3rem;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  position: sticky;
+  top: 1rem;
+  background: radial-gradient(#2e2e2e, #333333);
+  padding: var(--padding);
 }
 
 nav {
   display: flex;
-  gap: 3rem;
+  gap: var(--gap);
   flex: 1;
   align-items: center;
   justify-content: right;
@@ -59,17 +69,17 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 80%;
-  margin: 0 auto;
+  max-width: 800px;
+  margin: 1rem auto;
   flex: 1;
-  gap: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  gap: 64px;
+  padding: var(--padding);
 }
 
 .index-image {
   width: 200px;
   height: auto;
+  filter: drop-shadow(0 0 1rem #a41720); /* authentic */
 }
 
 .greeting {
@@ -80,8 +90,41 @@ main {
   font-size: 1rem;
 }
 
+ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
+
+  counter-reset: count;
+}
+
+li {
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  background-color: rgba(91, 108, 105, 0.5);
+  backdrop-filter: blur(10px);
+
+  counter-increment: count;
+}
+
+li:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+span::before {
+  content: counter(count) ". ";
+  color: #900000;
+  font-weight: bold;
+}
+
 footer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 3rem 1rem 1rem;
+  border-radius: var(--border-radius);
+  justify-content: center;
+  bottom: 1rem;
+  background: radial-gradient(#2e2e2e, #8b0000);
+  padding: var(--padding);
 }
