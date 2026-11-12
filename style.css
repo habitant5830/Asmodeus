@@ -1,0 +1,38 @@
+:root {
+  font-family: sans-serif;
+
+  /* variables */
+  --font-color: #ffffff;
+  --bg-color: #000000;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.index-logo {
+  font-size: xx-large;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: serif;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+header {
+  display: flex;
+  margin: 1rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
