@@ -9,6 +9,7 @@
   /* links */
   --link: #ff0000;
   --link-hover: #7f00ff;
+  --active: #ffd700;
 }
 
 a {
@@ -18,6 +19,11 @@ a {
 
 a:hover {
   color: var(--link-hover);
+}
+
+.active {
+  color: var(--active);
+  font-weight: bold;
 }
 
 .index-logo {
@@ -45,14 +51,15 @@ nav {
   gap: 3rem;
   flex: 1;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
+  margin-right: 1rem;
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 60%;
+  max-width: 80%;
   margin: 0 auto;
   flex: 1;
   gap: 1rem;
