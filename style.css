@@ -133,3 +133,22 @@ footer {
   backdrop-filter: blur(20px);
   padding: var(--padding);
 }
+
+@media (max-width: 600px) {
+  main {
+    max-width: 80%;
+  }
+
+  ul {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .greeting {
+    text-align: center;
+  }
+
+  .index-logo {
+    font-size: larger;
+  }
+}
