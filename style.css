@@ -8,7 +8,7 @@
 
   /* links */
   --link: #b8c2c1;
-  --link-hover: #4b0082;
+  --link-hover: #e6e6fa;
   --active: #f9c1b5;
   --gap: 24px;
   --border: 1px solid #bf3c3c;
@@ -52,8 +52,10 @@ header {
   border-radius: var(--border-radius);
   position: sticky;
   top: 1rem;
-  background: radial-gradient(#2e2e2e, #333333);
+  background: radial-gradient(#1d252a);
+  backdrop-filter: blur(20px);
   padding: var(--padding);
+  z-index: 1; /* make it appear top of everything. largest value is the toppest element. required a defined position property to work. */
 }
 
 nav {
@@ -115,8 +117,10 @@ li:last-child:nth-child(odd) {
 
 span::before {
   content: counter(count) ". ";
-  color: #900000;
+  color: #f7d3d1;
   font-weight: bold;
+  font-size: 28px;
+  padding: 5px;
 }
 
 footer {
@@ -125,6 +129,7 @@ footer {
   border-radius: var(--border-radius);
   justify-content: center;
   bottom: 1rem;
-  background: radial-gradient(#2e2e2e, #8b0000);
+  background: radial-gradient(#1d252a);
+  backdrop-filter: blur(20px);
   padding: var(--padding);
 }
